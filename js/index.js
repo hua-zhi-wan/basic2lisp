@@ -99,7 +99,7 @@ hide_help();
 
 function get_help() {
     var help_container = $('.help-content')[0];
-    $.ajax('/readme.md', 'GET', '', function (data) {
+    $.ajax('readme.md', 'GET', '', function (data) {
         help_flag = true;
         help_container.innerHTML = marked.parse(data);
     });
