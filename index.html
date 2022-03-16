@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>BASIC 2 Lisp</title>
+</head>
+<body>
+    <div class="container">
+        <div class="basic-area code-area">
+            <div class="code-area-tag"><span>BASIC</span></div>
+            <textarea 
+                name="basic-code" 
+                id="basic-code" 
+                class="code-textarea" 
+                spellcheck="false"
+            ></textarea>
+        </div>
+        <div class="lisp-area code-area">
+            <div class="code-area-tag"><span>Lisp</span></div>
+            <textarea 
+                name="lisp-code" 
+                id="lisp-code" 
+                class="code-textarea" 
+                spellcheck="false"
+            ></textarea>
+        </div>
+        <div class="side-area">
+            <div class="side-area-item">
+                <div class="output-area-tag"><span>Return</span></div>
+                <div id="return-output" class="output-area">undefined</div>
+            </div>
+            <div class="side-area-item">
+                <div class="output-area-tag"><span>Standard-Output</span></div>
+                <div id="std-output" class="output-area">undefined</div>
+            </div>
+
+            <div class="side-area-item">
+                <div class="output-area-tag"><span>Caches</span></div>
+                <div id="cache-output" class="output-area">
+                </div>
+            </div>
+
+            <div class="side-area-item">
+                <div class="output-area-tag"><span>Error</span></div>
+                <div id="error-output" class="output-area"></div>
+            </div>
+
+            <div class="side-area-item-bottom">
+                <div class="side-area-item">
+                    <div class="output-area-tag"><span>Help</span></div>
+                    <ul id="help-output" class="output-area">
+                        <li>Ctrl + F9 = Compile</li>
+                        <li>Ctrl + F10 = Run</li>
+                        <li>Ctrl + F11 = Clear</li>
+                        <li>Ctrl + S = Save</li>
+                        <li><span class="fake-a" onclick="show_help()">Get More Help Info</span></li>
+                    </ul>
+                </div>
+                <div class="side-area-item">
+                    <div class="output-area-tag"><span>Github Info</span></div>
+                    <ul id="help-output" class="output-area">
+                        <li>Repository: basic2lisp</li>
+                        <li>Author: <a href="https://github.com/HanaYabuki">HanaYabuki</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="help-info">
+        <div class="help-close" onclick="hide_help()">X</div>
+        <div class="help-content-container">
+            <div class="help-content"></div>
+        </div>
+    </div>
+    <script src="./js/compiler/basic.js"></script>
+    <script src="./js/compiler/lisp.js"></script>
+    <script src="./js/my-query.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
