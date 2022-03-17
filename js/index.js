@@ -14,8 +14,7 @@ document.onkeydown = function (event) {
         if (event.key === 'F11') {
             event.preventDefault();
             console.log('Clear');
-            $('#basic-code').value = '';
-            $('#lisp-code').value = '';
+            clear_input();
         }
         if (event.key === 's' || event.key === 'S') {
             event.preventDefault();
@@ -51,6 +50,11 @@ function run_lisp() {
     }, '');
     return_output.innerHTML = ret.return !== undefined ? ret.return : '';
     error_output.innerText = ret.error !== undefined ? ret.error : '';
+}
+
+function clear_input() {
+    $('#basic-code').value = '';
+    $('#lisp-code').value = '';
 }
 
 var code_cache = [];
